@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>Guess the Number</title>
+</head>
+<body>
+    <div class="col container align-items-center justify-content-center">
+        <h1 class="display-1 ">Welcome to the Great Number Game!!!</h1>
+        <h4 class="display-4 mx-auto">Guess a number between 1 and 100</h4>
+        <div id="formcon">
+            <form class="input-group mb-3" action="http://localhost:5000/" method="POST">
+            <label class"" for="number">Guess a number!</label>
+            <input class="" type="text" name="number">
+            <input class="" type="submit" value="Guess">
+            </form>
+            <h1 id="output">{{['']}}</h1>
+        </div>
+    </div>
+</body>
+</html>

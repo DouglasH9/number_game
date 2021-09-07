@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+}
+h4 {
+    text-align:center;
+}
+form {
+    margin: 0, auto;
+    display: flex;
+    justify-content: center;
+}
+label {
+    margin: 10px;
+}
+input{
+    margin: 10px;
+}
