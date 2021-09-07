@@ -13,13 +13,28 @@
         <h1 class="display-1 ">Welcome to the Great Number Game!!!</h1>
         <h4 class="display-4 mx-auto">Guess a number between 1 and 100</h4>
         <div id="formcon">
-            <form class="input-group mb-3" action="http://localhost:5000/" method="POST">
+            <form class="input-group mb-3" action="http://localhost:5000/guess" method="POST">
             <label class"" for="number">Guess a number!</label>
-            <input class="" type="text" name="number">
-            <input class="" type="submit" value="Guess">
+            <input class="" type="text" name="guess">
+            <input class="" type="submit" value="guess">
             </form>
-            <h1 id="output">{{['']}}</h1>
         </div>
+        {% if 'guess' in session %}
+            {% if session['guess'] == session['number']%}
+                <div id="correctAn" class="card flex">
+                    <h2>Wow! You must be psychic!</h2>
+                    <a href="/reset" class="btn btn-primary">Play again?</a>
+                </div>
+            {%elif session['guess'] < session['number']%}
+                <div id="tooLow"  class="card flex justify-content-center" style="background-color: aqua;">
+                    <h2>Not quite! Try higher...</h2>
+                </div>
+            {%elif session['guess'] > session['number']%}
+                <div id="tooHigh" class="card flex justify-content-center">
+                    <h2>Woah! Too high! Calm down!</h2>
+                </div>
+            {% endif %}
+        {%endif%}
     </div>
 </body>
 </html>

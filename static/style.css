@@ -4,6 +4,7 @@ h1 {
 h4 {
     text-align:center;
 }
+
 form {
     margin: 0, auto;
     display: flex;
@@ -14,4 +15,30 @@ label {
 }
 input{
     margin: 10px;
+}
+#correctAn {
+    display: block;
+    text-align: center;
+    width: 250px;
+    background-color: darkcyan;
+    margin: 10px, auto;
+}
+#tooLow {
+    display: block;
+    text-align: center;
+    width: 250px;
+    background-color: gray;
+    margin: 10px, auto;
+}
+#tooHigh {
+    display: block;
+    text-align: center;
+    width: 250px;
+    background-color: red;
+    margin: 10px, auto;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
