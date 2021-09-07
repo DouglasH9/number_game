@@ -26,13 +26,13 @@
                     <a href="/reset" class="btn btn-primary">Play again?</a>
                 </div>
             {%elif session['guess'] < session['number']%}
-                <div id="tooLow"  class="card flex justify-content-center" style="background-color: aqua;">
-                    <h2>Not quite! Try higher...</h2>
-                </div>
+                
+                    <h2 id='tooLow'>Not quite! Try higher...</h2>
+                
             {%elif session['guess'] > session['number']%}
-                <div id="tooHigh" class="card flex justify-content-center">
-                    <h2>Woah! Too high! Calm down!</h2>
-                </div>
+                
+                    <h2 id="tooHigh">Woah! Too high! Calm down!</h2>
+                
             {% endif %}
         {%endif%}
     </div>
